@@ -1,0 +1,7 @@
+HardwareShader PostProcess Screen {
+  Name "CRT_ColorGrade"
+  Shader "shaders/colorgrade.fp" 330
+  Texture lut "PPLUT"
+  Uniform int lut_index
+  Enabled
+}

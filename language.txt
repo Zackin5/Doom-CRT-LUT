@@ -1,0 +1,2 @@
+[enu default]
+GLPREFMNU_COLORGRADEENABLED = "Color grading";

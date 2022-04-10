@@ -1,0 +1,18 @@
+version "2.5"
+
+class CrtColorEventHandler : StaticEventHandler
+{
+	override void UiTick()
+	{
+		PlayerInfo p = players[consoleplayer];
+		if (Cvar.GetCVar("gl_colorgrading", p).GetInt() > 0)
+		{
+			Shader.SetUniform1i(p, "CRT_ColorGrade", "lut_index", gl_colorgrading_lutindex);
+			Shader.SetEnabled(p, "CRT_ColorGrade", true);
+		}
+		else
+		{
+			Shader.SetEnabled(p, "CRT_ColorGrade", false);
+		}
+	}
+}

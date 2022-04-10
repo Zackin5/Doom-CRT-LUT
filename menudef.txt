@@ -1,0 +1,4 @@
+AddOptionMenu "PostProcessMenu" {
+  StaticText " "
+  Option "$GLPREFMNU_COLORGRADEENABLED", r_colorgrading, "OnOff"
+}
