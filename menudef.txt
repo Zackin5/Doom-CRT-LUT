@@ -1,4 +1,19 @@
-AddOptionMenu "PostProcessMenu" {
-  StaticText " "
-  Option "$GLPREFMNU_COLORGRADEENABLED", r_colorgrading, "OnOff"
+AddOptionMenu "OptionsMenu" 
+{
+	SubMenu "$CRTLUT_TITLE", "CRTLUTOptionMenu"
+}
+
+OptionValue "CRTLUX_INDEX"
+{
+	1, "$CRTLUX_INDEX1"
+	2, "$CRTLUX_INDEX2"
+	3, "$CRTLUX_INDEX3"
+	4, "$CRTLUX_INDEX4"
+}
+
+OptionMenu "CRTLUTOptionMenu"
+{
+	Title "$CRTLUT_TITLE"
+	Option "$CRTLUT_COLORGRADEENABLED", gl_crt_colorgrading, "OnOff"
+	Option "$CRTLUX_INDEX", gl_crt_colorgrading_lutindex, "CRTLUX_INDEX"
 }

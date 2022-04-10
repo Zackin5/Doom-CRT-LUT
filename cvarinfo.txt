@@ -1,2 +1,2 @@
-nosave bool gl_colorgrading = true;
-nosave int gl_colorgrading_lutindex = 1;
+nosave bool gl_crt_colorgrading = true;
+nosave int gl_crt_colorgrading_lutindex = 1;
