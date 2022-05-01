@@ -3,5 +3,7 @@ HardwareShader PostProcess Screen {
   Shader "shaders/colorgrade.fp" 330
   Texture lut "PPLUT"
   Uniform int lut_index
+  Uniform float lut_chroma
+  Uniform float lut_luma
   Enabled
 }

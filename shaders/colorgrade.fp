@@ -26,10 +26,15 @@ vec4 lookup(sampler2D original, vec2 texCoord, sampler2D lut, int lutIndex)
     vec2 lut_pos_l = vec2(cell_l / COLORS + r_offset, g_offset);
     vec2 lut_pos_h = vec2(cell_h / COLORS + r_offset, g_offset);
 
-    vec4 graded_color_l = texture(lut, lut_pos_l);
-    vec4 graded_color_h = texture(lut, lut_pos_h);
+    vec3 graded_color_l = texture(lut, lut_pos_l).rgb;
+    vec3 graded_color_h = texture(lut, lut_pos_h).rgb;
 
-    return mix(graded_color_l, graded_color_h, fract(cell));
+    vec3 lutcolor = mix(graded_color_l, graded_color_h, fract(cell));
+
+    lutcolor =  mix(normalize(px.rgb), normalize(lutcolor.rgb), lut_chroma) *
+                mix(length(px.rgb), length(lutcolor.rgb), lut_luma);
+    
+    return vec4(clamp(lutcolor, 0.0, 1.0), px.a);
 }
 
 void main()

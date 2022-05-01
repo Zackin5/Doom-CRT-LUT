@@ -8,6 +8,8 @@ class CrtColorEventHandler : StaticEventHandler
 		if (Cvar.GetCVar("gl_crt_colorgrading", p).GetInt() > 0)
 		{
 			Shader.SetUniform1i(p, "CRT_ColorGrade", "lut_index", gl_crt_colorgrading_lutindex);
+			Shader.SetUniform1f(p, "CRT_ColorGrade", "lut_chroma", gl_crt_colorgrading_chroma);
+			Shader.SetUniform1f(p, "CRT_ColorGrade", "lut_luma", gl_crt_colorgrading_luma);
 			Shader.SetEnabled(p, "CRT_ColorGrade", true);
 		}
 		else

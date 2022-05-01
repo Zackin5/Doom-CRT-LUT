@@ -1,8 +1,10 @@
 [enu default]
 CRTLUT_TITLE = "CRT LUT Options";
 CRTLUT_COLORGRADEENABLED = "LUT Enabled";
-CRTLUX_INDEX = "LUT #";
-CRTLUX_INDEX1 = "LUT 1";
-CRTLUX_INDEX2 = "LUT 2 (1 + Orange Highlights)";
-CRTLUX_INDEX3 = "LUT 3 (2 + More Red)";
-CRTLUX_INDEX4 = "LUT 4 (3 + Orange Highlight Curve)";
+CRTLUT_INDEX = "LUT #";
+CRTLUT_INDEX1 = "LUT 1";
+CRTLUT_INDEX2 = "LUT 2 (1 + Orange Highlights)";
+CRTLUT_INDEX3 = "LUT 3 (2 + More Red)";
+CRTLUT_INDEX4 = "LUT 4 (3 + Orange Highlight Curve)";
+CRTLUT_CHROMA = "LUT Chroma";
+CRTLUT_LUMA	= "LUT Luma";

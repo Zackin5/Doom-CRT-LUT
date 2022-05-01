@@ -3,17 +3,19 @@ AddOptionMenu "OptionsMenu"
 	SubMenu "$CRTLUT_TITLE", "CRTLUTOptionMenu"
 }
 
-OptionValue "CRTLUX_INDEX"
+OptionValue "CRTLUT_INDEX"
 {
-	1, "$CRTLUX_INDEX1"
-	2, "$CRTLUX_INDEX2"
-	3, "$CRTLUX_INDEX3"
-	4, "$CRTLUX_INDEX4"
+	1, "$CRTLUT_INDEX1"
+	2, "$CRTLUT_INDEX2"
+	3, "$CRTLUT_INDEX3"
+	4, "$CRTLUT_INDEX4"
 }
 
 OptionMenu "CRTLUTOptionMenu"
 {
 	Title "$CRTLUT_TITLE"
 	Option "$CRTLUT_COLORGRADEENABLED", gl_crt_colorgrading, "OnOff"
-	Option "$CRTLUX_INDEX", gl_crt_colorgrading_lutindex, "CRTLUX_INDEX"
+	Option "$CRTLUT_INDEX", gl_crt_colorgrading_lutindex, "CRTLUT_INDEX"
+	Slider "$CRTLUT_CHROMA", gl_crt_colorgrading_chroma, 0.0, 1.0, 0.1
+	Slider "$CRTLUT_LUMA", gl_crt_colorgrading_luma, 0.0, 1.0, 0.1
 }
